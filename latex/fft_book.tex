@@ -1,0 +1,101 @@
+\documentclass[letter,12pt]{book}
+
+\title{The Fast Fourier Transform}
+\author{Edward A. Pier}
+
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{endnotes}
+\usepackage{times}
+\usepackage[small]{caption}
+\usepackage{makeidx}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
+
+\makeindex
+
+\newcommand{\vipa}{VIPA }
+
+\newcommand{\code}[1]{{\tt #1}}
+\newcommand{\file}[1]{{\tt #1}}
+\newcommand{\param}[1]{{\it #1}}
+\newcommand{\port}[1]{{\it #1}}
+
+\newcommand{\term}[1]{``#1''}
+
+\newcommand{\app}[1]{\file{#1}\index{#1}}
+\newcommand{\macro}[1]{\app{#1}}
+
+% indexed quantities with alternate display forms (display is first arg)
+\newcommand{\modulex}[2]{{\bf #1}\index{#2}}
+\newcommand{\module}[1]{\modulex{#1}{#1}}
+\newcommand{\modules}[1]{\modulex{#1s}{#1}}
+
+\newcommand{\datatypex}[2]{{\bf #1}\index{#2}}
+\newcommand{\datatype}[1]{\datatypex{#1}{#1}}
+\newcommand{\datatypes}[1]{\datatypex{#1s}{#1}}
+
+%symbols
+\newcommand{\menu}{$\rightarrow$}
+\newcommand{\ie}{{\it i.e.} }
+\newcommand{\eg}{{\it e.g.} }
+
+\parindent 0pt
+\parskip 12pt
+
+\pagestyle{fancy}
+\lhead{}
+\rhead{The FFT}
+
+%\lfoot{\it Proprietary}
+%\rfoot{\vspace{-0.3in}\includegraphics[trim=0in 0in 5.5in 9.7in, clip, width=1in]{Oceanit_logo_Color2.pdf}}
+
+\begin{document}
+\begin{titlepage}
+\begin{center}
+
+\vfill
+{\bf \LARGE The Fast Fourier Transform} \\
+VIPA Version:
+\\
+Draft Generated: \today \\
+\vfill
+\end{center}
+\end{titlepage}
+
+
+
+\tableofcontents
+\pagebreak
+
+\input{sine.tex}
+
+\printindex
+
+\end{document}
